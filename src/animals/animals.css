@@ -1,0 +1,7 @@
+.loader{
+    background-image: url("../assets/loading.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width:100%;
+}

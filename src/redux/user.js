@@ -2,7 +2,8 @@ import { createSelector, createSlice } from '@reduxjs/toolkit'
 
 export const initialState = {
   user: {
-    animalsInfo: []
+    animalsInfo: [],
+    isLoaded: false,
   },
 }
 
@@ -12,11 +13,14 @@ export const userSlice = createSlice({
   reducers: {
     addAnimals: (state, action) => {
         state.user.animalsInfo = action.payload
+    },
+    loadingEnded: (state, action) => {
+        state.user.isLoaded = action.payload
     }
   },
 })
 
 
-export const { addFirstName, addLastName } = userSlice.actions
+export const { addAnimals, loadingEnded } = userSlice.actions
 
 export default userSlice.reducer
