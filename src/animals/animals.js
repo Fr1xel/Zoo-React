@@ -23,15 +23,16 @@ const Animals = () => {
         animalsInfo?.map(animal => {
             return(
                 <div key={animal.id}>
-                    <h1>{animal.name}</h1>
-                    <h2>{animal.animal_type}</h2>
-                    <h3>{animal.diet}</h3>
+                    <h1>Name: {animal.name}</h1>
+                    <h2>Type: {animal.animal_type}</h2>
+                    <h3>Diet: {animal.diet}</h3>
                 </div>
             )
         }
         )
         :
-        <div className="loader">
+        <div className="spinner">
+            <img src={require("../assets/loading.gif")} className="spinner-img"></img>
         </div>
     }</>
     )
