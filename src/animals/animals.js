@@ -4,8 +4,8 @@ import { fetchAnimals } from "../redux/user";
 import "./animals.css";
 
 const Animals = () => {
-  const animalsInfo = useSelector((state) => state.user.user.animalsInfo);
-  const isLoadingDone = useSelector((state) => state.user.user.isLoaded);
+  const animalsInfo = useSelector((state) => state.user.animals.animalsInfo);
+  const isLoadingDone = useSelector((state) => state.user.animals.isLoaded);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchAnimals());
