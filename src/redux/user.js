@@ -27,12 +27,6 @@ export const userSlice = createSlice({
   initialState,
 
   reducers: {
-    addAnimals: (state, action) => {
-      state.user.animalsInfo = action.payload;
-    },
-    loadingEnded: (state, action) => {
-      state.user.isLoaded = action.payload;
-    },
   },
   extraReducers: {
     [fetchAnimals.fulfilled]: (state, action) => {

@@ -14,7 +14,7 @@ const Animals = () => {
   return (
     <>
       {isLoadingDone ? (
-        animalsInfo?.map((animal) => {
+        animalsInfo?.map(animal => {
           return (
             <div key={animal.id}>
               <h1>Name: {animal.name}</h1>
