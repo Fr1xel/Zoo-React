@@ -13,8 +13,7 @@ const Animals = () => {
 
   return (
     <>
-      {isLoadingDone ? 
-      (
+      {isLoadingDone ? (
         animalsInfo?.map((animal) => {
           return (
             <div key={animal.id}>
@@ -24,8 +23,7 @@ const Animals = () => {
             </div>
           );
         })
-      ) :
-       (
+      ) : (
         <div className="spinner">
           <img
             src={require("../assets/loading.gif")}
